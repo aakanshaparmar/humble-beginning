@@ -53,8 +53,23 @@
           latitude = Cesium.Math.toDegrees(cartographic.latitude).toFixed(2);
           alert(latitude+' '+longitude);
           document.getElementById("latLongInfo").innerHTML = '<b>Coordinates selected <br> Latitude: '+latitude+'<br>Longitude: '+longitude+'</b>';
+          pointOfInterest();
         } 
       }, false);
+
+      function pointOfInterest(){
+        var circle = viewer.entities.add({
+          position: Cesium.Cartesian3.fromDegrees(longitude, latitude),
+          name : 'Position Clicked on ',
+          ellipse : {
+            semiMinorAxis : 150000.0,
+            semiMajorAxis : 150000.0,
+            material : Cesium.Color.WHITE
+          }
+        });
+
+        viewer.zoomTo(viewer.entities);
+      }
 
 
 
