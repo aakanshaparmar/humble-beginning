@@ -1,10 +1,37 @@
 <!DOCTYPE html>
+
 <html>
 	<head>
-		<script src="scripts/emailScript.js"> </script>
+		<meta content = "text/html; charset = ISO-8859-1" http-equiv = "content-type">
+		<link rel="stylesheet" type="text/css" href="css/mailBoxStyle.css">
+	  	<script src="scripts/emailScript.js"> </script>
+		<title> Mailbox </title> 
 	</head>
-	<body>
-		<button id="buttonView" onclick="loadDoc()">Click to view mail</button>
-		<div id = "emailDetails"></div>
-	</body>
+	
+   	<body>
+      
+		<div id="navBar">
+			<ul id="mailMenu"> 
+				<li> <button id="viewEmail" onClick="loadInbox()"> Inbox </button> </li>
+				<li> <button id="viewEmail" onClick="loadSentMail()"> Sent </button> </li>
+				<li> <button id="viewEmail" onClick="loadDrafts()"> Drafts </button> </li>
+				<li> <button id="viewEmail" onClick="loadSpam()"> Spam </button> </li>
+				<li> <button id="viewEmail" onClick="loadTrash()"> Trash </button> </li>
+			</ul>
+		</div>
+		
+ <table id="mailbox">
+         <tr>
+            <th>From</th>
+            <th>Subject</th></tr>
+         <tr><td><div id = "Name">Sachin</div></td>
+         <td><div id = "Country">India</div></td></tr>
+      </table>
+
+      <div class = "central">
+         <button type = "button" onclick = "loadJSON()">Update Details </button>
+      </div>
+		
+   	</body>
+		
 </html>
