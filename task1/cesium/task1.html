@@ -46,16 +46,18 @@
       viewer.canvas.addEventListener('click', function(e){
         var mousePosition = new Cesium.Cartesian2(e.clientX, e.clientY);
         var ellipsoid = viewer.scene.globe.ellipsoid;
-        var cartesian = viewer.camera.pickEllipsoid(mousePosition, ellipsoid);
+        var cartesian = viewer.camera.pickEllipsoid(mousePosition);
         if (cartesian) {
           var cartographic = ellipsoid.cartesianToCartographic(cartesian);
           longitude = Cesium.Math.toDegrees(cartographic.longitude);
           latitude = Cesium.Math.toDegrees(cartographic.latitude);
           document.getElementById("latLongInfo").innerHTML = '<b>Coordinates selected <br> Latitude: '+latitude+'<br>Longitude: '+longitude+'</b>';
+           entity.position = cartesian;
+                        entity.label.show = true;
+                        entity.label.text = '(' + longitudeString + ', ' + latitudeString + ')';
           pointOfInterest();
         } 
       }, false);
-
       function pointOfInterest()
       {
          var circle = viewer.entities.add({
@@ -68,7 +70,6 @@
           }
         });
       }
-
   </script>
 
 </body>

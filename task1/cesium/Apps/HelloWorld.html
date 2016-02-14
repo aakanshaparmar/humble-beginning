@@ -55,10 +55,10 @@
           pointOfInterest();
         } 
       }, false);
-
+      
       function pointOfInterest()
       {
-        var circle = viewer.entities.add({
+         var circle = viewer.entities.add({
           position: Cesium.Cartesian3.fromDegrees(longitude, latitude),
           name : 'Position Clicked on ',
           ellipse : {
@@ -68,7 +68,6 @@
           }
         });
       }
-
   </script>
 
 </body>
