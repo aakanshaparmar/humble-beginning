@@ -56,8 +56,7 @@
         } 
       }, false);
 
-      function pointOfInterest()
-      {
+      function pointOfInterest(){
         var circle = viewer.entities.add({
           position: Cesium.Cartesian3.fromDegrees(longitude, latitude),
           name : 'Position Clicked on ',
@@ -67,6 +66,8 @@
             material : Cesium.Color.WHITE
           }
         });
+
+        //viewer.flyTo(viewer.entities);
       }
 
   </script>
