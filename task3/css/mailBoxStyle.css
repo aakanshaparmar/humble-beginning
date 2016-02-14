@@ -52,9 +52,11 @@ body{
 #noOfEmails{
 	text-align: left;
 	width: 100%;
+	font-style: bold;
+	color:#ffffff;
 }
 
-a{
+a, h1{
 	text-decoration: none;
-	color:#919191;
+	color:#ffffff;
 }
