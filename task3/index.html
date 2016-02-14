@@ -8,30 +8,33 @@
 		<title> Mailbox </title> 
 	</head>
 	
-   	<body>
-      
-		<div id="navBar">
-			<ul id="mailMenu"> 
-				<li> <button id="viewEmail" onClick="loadInbox()"> Inbox </button> </li>
-				<li> <button id="viewEmail" onClick="loadSentMail()"> Sent </button> </li>
-				<li> <button id="viewEmail" onClick="loadDrafts()"> Drafts </button> </li>
-				<li> <button id="viewEmail" onClick="loadSpam()"> Spam </button> </li>
-				<li> <button id="viewEmail" onClick="loadTrash()"> Trash </button> </li>
-			</ul>
-		</div>
-		
- <table id="mailbox">
-         <tr>
-            <th>From</th>
-            <th>Subject</th></tr>
-         <tr><td><div id = "Name">Sachin</div></td>
-         <td><div id = "Country">India</div></td></tr>
-      </table>
+   	<body onload="initialLoad()" >
 
-      <div class = "central">
-         <button type = "button" onclick = "loadJSON()">Update Details </button>
-      </div>
-		
+   		<div id="header">
+   			<h1 id="heading"> Welcome!</h1>
+   		</div>
+
+   		<div>
+			<ul id="mailMenu"> 
+					<li> <a href="#" onClick="loadInbox()"> Inbox </a> </li>
+					<li> <a href="#" onClick="loadSentMail()"> Sent </a> </li>
+					<li> <a href="#" onClick="loadDrafts()"> Drafts </a> </li>
+					<li> <a href="#" onClick="loadSpam()"> Spam </a> </li>
+					<li> <a href="#" onClick="loadTrash()"> Trash </a> </li>
+			</ul>
+			
+			<div id="mainBody">
+	 			<p id="noOfEmails"></p>
+	      
+				<table id="mailbox">
+			        <tbody id="browserContent">
+			        </tbody>
+		     	</table>
+		     	
+		     	<p id="noContentMessage"></p>
+		    </div>
+		</div>
+   	
    	</body>
 		
 </html>

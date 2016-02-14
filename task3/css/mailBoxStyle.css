@@ -1,15 +1,60 @@
-#navBar{
-	width:100%;
-	padding-left: 5em;
+
+body{
+	background-color: #000000;
+	color:#919191;
+	font-family: "Lucida Sans Unicode";
+}
+
+#mailMenu{
+	width:5%;
+	float: left;
+}
+
+#mainBody{
+	width:90%;
+	float: right;
 }
 
 #mailMenu li{
-	display: inline;
 	list-style-type: none;
-	padding-right: 10em;
 	vertical-align: center;
+	padding-bottom: 1em;
 }
 
 #viewEmail{
-	font-size: 1.5em;
+	font-size: 1em;
+	height:3em;
+	width:100%;
+	text-align: left;
+	background-color: #000000;
+	border:none;
+}
+
+#mailbox{
+	width:100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+#mailbox tr {
+	border-style: solid;
+    border-color: #919191;
+    border-width: 0em 0em .1em 0em;
+    height: 3em;
+    width: 100%;
+}
+
+#noContentMessage {
+	text-align: center;
+	width: 100%;
+}
+
+#noOfEmails{
+	text-align: left;
+	width: 100%;
+}
+
+a{
+	text-decoration: none;
+	color:#919191;
 }
