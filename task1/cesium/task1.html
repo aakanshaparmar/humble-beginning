@@ -52,12 +52,10 @@
           longitude = Cesium.Math.toDegrees(cartographic.longitude);
           latitude = Cesium.Math.toDegrees(cartographic.latitude);
           document.getElementById("latLongInfo").innerHTML = '<b>Coordinates selected <br> Latitude: '+latitude+'<br>Longitude: '+longitude+'</b>';
-           entity.position = cartesian;
-                        entity.label.show = true;
-                        entity.label.text = '(' + longitudeString + ', ' + latitudeString + ')';
           pointOfInterest();
         } 
       }, false);
+      
       function pointOfInterest()
       {
          var circle = viewer.entities.add({
@@ -70,6 +68,7 @@
           }
         });
       }
+
   </script>
 
 </body>

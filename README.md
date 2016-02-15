@@ -3,9 +3,14 @@
 ## Task 1
 
 	The file to be executed is task1/cesium/task1.html. 
-	Once the server is started, the program can be accessed at localhost:8080/task1.html
+
+	To view the application one must navigate to the directory cesium and run the command "node server.js" to start the server on the local machine. Once the server has started, the program can be accessed at localhost:8080/task1.html
 
 	Clicking on a point on the globe/map will display a white dot at that location and also display the consequent latitude, longitude values in the top left part of the screen.
+
+	In some systems, the white dot appears slightly below the cursor ... that is because the coordinates getting stored are slightly lower than the pointer. However in such a case the more you zoom in the more accurately will the location get selected.
+
+	Also, as the system is running on a local server there might be a slight delay experienced for the dot to appear
 
 ## Task 2
 
@@ -56,3 +61,5 @@
 	As the "to" and "folder" values are common in all JSON objects they both have been displayed once only on the top and left side of the screen respectively. 
 
 	The application has been built to resemble an email browser.
+
+	Currenly simple JavaScript has been used however, in case other folders and more dynamic data was present, I would have implemented it using ReactJS as it would significantly improve the performance. 
