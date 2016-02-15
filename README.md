@@ -50,3 +50,9 @@
 
 
 ## Task 3
+
+	In task 3 the file to be opened is task3/task3.html. The application uses AJAX to retrieve the JSON object at https://db4.insightglobe.net/career/mail. It then displays the "from", "subject" and "date" values in the form of a table. 
+
+	As the "to" and "folder" values are common in all JSON objects they both have been displayed once only on the top and left side of the screen respectively. 
+
+	The application has been built to resemble an email browser.
