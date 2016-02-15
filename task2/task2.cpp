@@ -96,7 +96,8 @@ int main(int argc, char *argv[])
 		
 		//Construct final file path
 		std::string finalFilePath;
-		finalFilePath = filePathRoot+"/"+zoom+"_"+lat+"_"+lon+".jpg";
+		std::string extension(".jpg");
+		finalFilePath = filePathRoot+"/"+zoom+"_"+lat+"_"+lon+extension;
 
 		cout<<endl<<"File path of imagery is:"<<endl;
 		cout<<finalFilePath<<endl;
