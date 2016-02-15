@@ -4,7 +4,7 @@
 
 	The file to be executed is task1/cesium/task1.html. 
 
-	To view the application one must navigate to the directory cesium and run the command "node server.js" to start the server on the local machine. Once the server has started, the program can be accessed at localhost:8080/task1.html
+	To view the application one must navigate to the directory task1/cesium and run the command "node server.js" to start the server on the local machine. Once the server has started, the program can be accessed at localhost:8080/task1.html
 
 	Clicking on a point on the globe/map will display a white dot at that location and also display the consequent latitude, longitude values in the top left part of the screen.
 
