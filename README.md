@@ -1,9 +1,9 @@
 ## Notes
  
- ## Task 1
+## Task 1
 
 
- ##Task 2
+## Task 2
  The program 
 
- ## Task 3
+## Task 3
