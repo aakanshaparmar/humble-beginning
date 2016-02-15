@@ -2,6 +2,8 @@ using namespace std;
 
 #include <iostream>
 #include <string>
+#include <stdio.h>
+
 
 int main(int argc, char *argv[])
 {
@@ -11,30 +13,95 @@ int main(int argc, char *argv[])
     	cout<<"Please enter all 3 - zoom level, latitude and longitude in this order";
     }
 	//If correct number of parameters have been eneteredelse 
+	else
 	{
 		string filePathRoot = "cesium/Build/Cesium/Widgets/Images/ImageryProviders";
-		std::string tempZoom(argv[1]);
-		std::string tempLat(argv[2]);
-		std::string tempLon(argv[3]);
-
-		std::string zoom;
+		std::string zoom(argv[1]);
 		std::string lat;
 		std::string lon;
+		
+		//Temp values 
+		char temp[6], temp2[6];
+		std::string tempDeg (argv[2]);
 
-		char temp[5];
-		char temp2[5];
 
 		//Truncate get till 2 decimal places of latitude 
-		for(int i=0; i<5; i++)
+		bool crossedDecimal=0;
+		int decimalCount=0;
+		int j=0;
+
+		for(int i=0; i<tempDeg.length(); i++)
 		{
-			temp[i]=argv[2][i];
-			temp2[i]=argv[3][i];
+			if(crossedDecimal==1)
+			{
+				if(decimalCount<2)
+				{
+					temp[j]=tempDeg[i];
+					j++;
+					decimalCount++;
+				}
+				else
+				{
+					i=tempDeg.length();
+				}
+			}	
+			else if (tempDeg[i] == '.')
+			{
+				crossedDecimal = 1;
+			}
+			else
+			{	
+				temp[j]=tempDeg[i];
+				j++;
+			}
 		}
 
 		lat = temp;
+		
+
+		//Truncate get till 2 decimal places of longitude
+		//Reinitialize values to 0
+		tempDeg = argv[3];
+		crossedDecimal=0;
+		decimalCount=0;
+		j=0;
+
+		for(int i=0; i<tempDeg.length(); i++)
+		{
+			if(crossedDecimal==1)
+			{
+				if(decimalCount<2)
+				{
+					temp2[j]=tempDeg[i];
+					j++;
+					decimalCount++;
+				}
+				else
+				{
+					i=tempDeg.length();
+				}
+			}	
+			else if (tempDeg[i] == '.')
+			{
+				crossedDecimal = 1;
+			}
+			else
+			{	
+				temp2[j]=tempDeg[i];
+				j++;
+			}
+		}
+
 		lon = temp2;
-		cout<<lat<<"+"<<lon<<"+"<<endl;	
+		
+		//Construct final file path
+		std::string finalFilePath;
+		finalFilePath = filePathRoot+"/"+zoom+"_"+lat+"_"+lon+".jpg";
+
+		cout<<endl<<"File path of imagery is:"<<endl;
+		cout<<finalFilePath<<endl;
 	}
+
 
 	return 0;
     
