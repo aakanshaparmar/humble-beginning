@@ -31,7 +31,7 @@
 
 		For example if input is zoom - 18, latitude - 34.5678 and longitude - 45.6677 file name will be 18_3456_4566.jpg
 
-		The negative sign in some latitude and longitude values will be ignored for naming purposes.
+		The negative sign in some latitude and longitude values will be also be included in the filename.
 
 	2.) The root url of the file for the purposes of this program is assumed to be - 
 		
@@ -62,4 +62,4 @@
 
 	The application has been built to resemble an email browser.
 
-	Currenly simple JavaScript has been used however, in case other folders and more dynamic data was present, I would have implemented it using ReactJS as it would significantly improve the performance. 
+	Currenly no external JavaScript library has been used. However, in case other folders and more dynamic data was present, the application would have been implemented using ReactJS. This would significantly reduce the load time of the application.
