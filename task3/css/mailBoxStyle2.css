@@ -1,0 +1,62 @@
+
+body{
+	background-color: #000000;
+	color:#919191;
+	font-family: "Lucida Sans Unicode";
+}
+
+#mailMenu{
+	width:5%;
+	float: left;
+}
+
+#emailContent{
+	width:90%;
+	float: right;
+}
+
+#mailMenu li{
+	list-style-type: none;
+	vertical-align: center;
+	padding-bottom: 1em;
+}
+
+#viewEmail{
+	font-size: 1em;
+	height:3em;
+	width:100%;
+	text-align: left;
+	background-color: #000000;
+	border:none;
+}
+
+#mailbox{
+	width:100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+#mailbox tr {
+	border-style: solid;
+    border-color: #919191;
+    border-width: 0em 0em .1em 0em;
+    height: 3em;
+    width: 100%;
+}
+
+#noContentMessage {
+	text-align: center;
+	width: 100%;
+}
+
+#noOfEmails{
+	text-align: left;
+	width: 100%;
+	font-style: bold;
+	color:#E0E0E0;
+}
+
+a, h1{
+	text-decoration: none;
+	color:#E0E0E0;
+}
